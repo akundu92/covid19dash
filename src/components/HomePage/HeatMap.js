@@ -57,7 +57,7 @@ const HeatMap=(props)=>{
   }}
   // Note: you will need to get a mapsApiKey for your project.
   // See: https://developers.google.com/chart/interactive/docs/basic_load_libs#load-settings
-  mapsApiKey="AIzaSyDb7BA5qkJX_SpBmUp3FFutoQ8r2z9f4X0"
+  mapsApiKey=""
   rootProps={{ 'data-testid': '4' }}
 />
     )
