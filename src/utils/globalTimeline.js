@@ -1640,8 +1640,8 @@ const sampleData=[
         //adding totals for each filtered data
         dateFilteredArray.map(data=>{
             cases=cases+parseInt(data.cases);
-            deaths=cases+parseInt(data.deaths);
-            recovered=cases+parseInt(data.recovered);
+            deaths=deaths+parseInt(data.deaths);
+            recovered=recovered+parseInt(data.recovered);
         })
         tempGlobalObject.date=x;
         tempGlobalObject.cases=String(cases);

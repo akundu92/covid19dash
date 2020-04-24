@@ -23,7 +23,7 @@ const TotalCasesGraph=()=>{
   const renderData=()=>{
     let arr=[[
       { type: 'date', label: 'Date' },
-      'Total Cases',
+      'Total Cases','Deaths',
     ]]
 
     const compare=(a,b)=>{
@@ -47,6 +47,7 @@ const TotalCasesGraph=()=>{
         let temp=[]
         temp.push(new Date(x.date));
         temp.push((parseInt(x.cases)))
+        temp.push((parseInt(x.deaths)))
         arr.push(temp)
       })
     }
@@ -71,17 +72,8 @@ const TotalCasesGraph=()=>{
     },
     width: "100%",
     height: "100%",
-    series: {
-      // Gives each series an axis name that matches the Y-axis below.
-      0: { axis: 'Temps' },
-    },
-    axes: {
-      // Adds labels to each axis; they don't have to match the axis names.
-      y: {
-        Temps: { label: 'Total Confirmed' },
-        Daylight: { label: 'Daylight' },
-      },
-    },
+    
+    
   }}
   rootProps={{ 'data-testid': '4' }}
 />
