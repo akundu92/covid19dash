@@ -29,6 +29,7 @@ const HomePage=()=>{
         <>
         <GlobalStatus/>
         <SortableSummaryTable />
+        
         </>
         // <ComplexTable ></ComplexTable>
     )

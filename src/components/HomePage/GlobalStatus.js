@@ -11,6 +11,7 @@ import HeatMap from './HeatMap';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import TotalCasesGraph from '../charts/TotalCasesGraph';
+import GlobalCountDisplay from './GlobalCountDisplay';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -109,8 +110,7 @@ export default function GlobalStatus() {
                   <HeatMap />
                  
         </Paper>
-       <Paper className={classes.status} >  
-        </Paper>
+       <GlobalCountDisplay className={classes.status} />
 
         <Paper className={classes.graph} >
      

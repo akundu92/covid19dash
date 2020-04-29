@@ -5,6 +5,8 @@ import {Chart} from 'react-google-charts';
 import {useSelector} from 'react-redux';
 import {globalTimeline} from '../../utils/globalTimeline'
 
+import CircularProgress from '@material-ui/core/CircularProgress'
+
 
 const TotalCasesGraph=()=>{
   const timelineState=useSelector(state=>state.timelineState);
@@ -77,6 +79,6 @@ const TotalCasesGraph=()=>{
   }}
   rootProps={{ 'data-testid': '4' }}
 />
-    ):''
+    ):( <CircularProgress />)
 }
 export default TotalCasesGraph;
