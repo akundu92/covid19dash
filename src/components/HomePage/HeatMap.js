@@ -52,7 +52,7 @@ const HeatMap=(props)=>{
   data={getSummaryData()}
   options={{
     colorAxis: { colors: ['#FFFFFF','#F26D4B','#F59269','#E33641','#E73D3F','#CB1B4F','#981B5B','#7A1F59','#5E1F52','#5E1F52'] },
-    backgroundColor: '#81d4fa',
+    backgroundColor: '#FFFFFF',
     defaultColor: '#f5f5f5',
   }}
   // Note: you will need to get a mapsApiKey for your project.
