@@ -2,6 +2,8 @@ import React from 'react';
 import {useSelector} from 'react-redux';
 import GeneralCountDisplay from '../HomePage/GeneralCountDisplay';
 import { makeStyles } from '@material-ui/core/styles';
+import CountryCasesGraph from '../charts/CountryCasesGraph';
+import GeneralTotalCasesGraph from '../charts/GeneralTotalCasesGraph';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -49,12 +51,21 @@ const useStyles = makeStyles((theme) => ({
 
 const CasesByCountry=(props)=>{
     const summaryState=useSelector(state=>state.summaryState);
+    const timelineState=useSelector(state=>state.timelineState);
     const countryState=summaryState.Countries.filter(x=>x.Country===props.match.params.country)[0]
+    console.log(countryState);
     const classes=useStyles();
-
+      if(countryState){
     return (
+      <>
         <GeneralCountDisplay status={countryState} className={classes.status}></GeneralCountDisplay>
+        <GeneralTotalCasesGraph timelineState={timelineState} countryCode={countryState.CountryCode} />
+      </>
     )
+    }
+    else{
+      return<h1>No Cases</h1>
+    }
 }
 
 export default  CasesByCountry;

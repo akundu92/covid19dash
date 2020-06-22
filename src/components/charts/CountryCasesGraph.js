@@ -9,12 +9,11 @@ import CircularProgress from '@material-ui/core/CircularProgress'
 import GeneralTotalCasesGraph from './GeneralTotalCasesGraph'
 
 
-const TotalCasesGraph=()=>{
+const CountryCasesGraph=()=>{
   const timelineState=useSelector(state=>state.timelineState);
-  const [india,setIndia]=useState(null);
 
-  return <GeneralTotalCasesGraph timelineState={timelineState} />
+  return <GeneralTotalCasesGraph timelineState={timelineState} countryCode="IN"/>
 
   
 }
-export default TotalCasesGraph;
+export default CountryCasesGraph;
