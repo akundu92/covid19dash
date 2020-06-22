@@ -47,7 +47,7 @@ const useStyles = makeStyles((theme) => ({
     justifyContent:'center',
     display: 'flex',
     flexDirection: "row",
-    flexBasis: '300px',
+    flexBasis: '100px',
     padding: 10,
     flexGrow: 1,
     height:350,

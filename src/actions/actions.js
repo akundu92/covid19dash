@@ -10,10 +10,20 @@ import {FETCH_COUNTRIES,
 export const fetchCountries=()=>{
     return async function(dispatch,getState){
         const response=await covid19api.get('/countries');
+        // console.log(response.data)
+
+        function sort(a,b){
+            if(a.Country>b.Country){
+                return 1
+            }
+            else{
+                return -1
+            }
+        }
 
         dispatch({
             type: FETCH_COUNTRIES,
-            payload: response.data
+            payload: response.data.sort(sort)
         }) 
 
     }
